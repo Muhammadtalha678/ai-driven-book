@@ -12,7 +12,9 @@ description: "Using PPO and reward functions to teach movement."
 
 Instead of writing `if lean_forward then push_back`, we define a **Reward Function**.
 
-$$ R = R_{velocity} + R_{upright} - C_{energy} $$
+```math
+R = R_{velocity} + R_{upright} - C_{energy}
+```
 
 The robot explores actions. If it walks forward and stays upright, it gets points. If it falls or uses too much energy, it loses points. Over millions of iterations, algorithms like **PPO (Proximal Policy Optimization)** converge on a walking gait that maximizes reward. This "emergent behavior" often looks surprisingly natural.
 
